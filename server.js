@@ -47,7 +47,7 @@ function createTemp(data){
                     ${date}
                 </div>
                 <div>
-                    ${content}
+                    ${cont}
                 </div>
                 </div>
                 </div>
