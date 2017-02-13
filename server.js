@@ -35,7 +35,7 @@ function createTemp(data){
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <link href="/ui/style.css" rel="stylesheet" />
             </head>
-            <body class="container">
+            <body class="container center">
                 <div class="stl">
                 <div>
                     <a href="/" >Home</a>
@@ -75,7 +75,7 @@ app.get('/ui/madi.png', function (req, res) {
 
 app.get('/:articleName', function (req, res) {
   var articleName = req.params.articleName;
-  res.send(createTemp(articles[articleName]));   //In here "articles" obj names data=articleName=art1 or art2 or art3 
+  res.send(createTemp(articles[articleName]));   //In here "articles" obj names data=articleName=art1 or art2 or art3
 });
 
 
