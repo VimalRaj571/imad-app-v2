@@ -35,7 +35,7 @@ function createTemp(data){
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <link href="/ui/style.css" rel="stylesheet" />
             </head>
-            <body>
+            <body class='container'>
                 <div class="stl">
                 <div>
                     <a href="/" >Home</a>
