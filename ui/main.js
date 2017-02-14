@@ -15,15 +15,29 @@ img.onclick = function(){                                                       
 
 //Counter CODE
 var btn = document.getElementById('btn');
-var span = document.getElementById('span_no');
-var counter = 0;
+
+//var counter = 0;
 
 btn.onclick = function(){
     
 //Create request Obj
 var request = new XMLHttpRequest();
+
 //Capture the response and store in the variable
-//Render in the correct span
-    counter = counter + 1;
-    span.innerHTML = counter.toString();
+
+request.onreadystatechange = function(){
+    if(request.readyState === XMLHttpRequest.DONE){
+        //Take some Action 
+        if(request.status === 200){
+            //Render in the correct span
+            var counter = request.responseText;
+            //counter = counter + 1;
+            var span = document.getElementById('span_no');
+            span.innerHTML = counter.toString();
+            }
+        }
+    };
+    //Make Req
+    httpRequest.open('GET', 'http://vimalraj571.imad.hasura-app.io/counter', true);
+    httpRequest.send(null);
 };
