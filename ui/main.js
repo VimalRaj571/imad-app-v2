@@ -41,3 +41,15 @@ request.onreadystatechange = function(){
     request.open('GET', 'http://vimalraj571.imad.hasura-app.io/counter', true);
     request.send(null);
 };
+
+
+
+//Common in ajax call reqs
+//some.func = function () {
+//var request = new XMLHttpRequest();
+//request.onreadystatechange = function(){
+//    if(request.readyState === XMLHttpRequest.DONE){
+//        //Take some Action 
+//        if(request.status === 200){ OURS FUNC :) }   }  } }
+//request.open('GET', 'http://vimalraj571.imad.hasura-app.io/counter', true);
+//request.send(null);
