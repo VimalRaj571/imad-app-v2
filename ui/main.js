@@ -5,7 +5,7 @@ var img = document.getElementById('mini');
 //make anim try put soome non static msg
 var marginLeft= 0 ;
 function moveRight(){
-    marginLeft = marginLeft + 1
+    marginLeft = marginLeft + 1 ;
     img.style.marginLeft =  marginLeft +'px';
     //img.style.marginLeft = '400px';
     
