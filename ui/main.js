@@ -38,6 +38,6 @@ request.onreadystatechange = function(){
         }
     };
     //Make Req
-    httpRequest.open('GET', 'http://vimalraj571.imad.hasura-app.io/counter', true);
-    httpRequest.send(null);
+    request.open('GET', 'http://vimalraj571.imad.hasura-app.io/counter', true);
+    request.send(null);
 };
