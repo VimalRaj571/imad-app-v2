@@ -15,7 +15,7 @@ img.onclick = function(){                                                       
 
 
 var btn = document.getElementById('btn');
-var span = document.getElementById('span');
+var span = document.getElementById('span_no');
 
 btn.onclick = function(){
     span.innerHTML = 'dude';
