@@ -12,3 +12,11 @@ function moveRight(){                                                           
 img.onclick = function(){                                                       //func2 to make call the leftmargin ++
     var animate = setInterval(moveRight,50); // call moveRight in 20msec
 };
+
+
+var btn = document.getElementById('btn');
+var span = document.getElementById('span');
+
+btn.onclick = function(){
+    span.innerHTML = 'dude';
+};
