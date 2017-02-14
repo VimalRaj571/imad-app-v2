@@ -20,10 +20,9 @@ var counter = 0;
 
 btn.onclick = function(){
     
-//Make the request to counter Endpoint
-
+//Create request Obj
+var request = new XMLHttpRequest();
 //Capture the response and store in the variable
-
 //Render in the correct span
     counter = counter + 1;
     span.innerHTML = counter.toString();
