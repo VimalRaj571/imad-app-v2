@@ -4,5 +4,5 @@ var img = document.getElementById('mini');
 
 img.onclick = function(){
     
-    img.style.backgroundPosition = '-40px 0px';
+    img.style.marginLeft = '400px';
 };
