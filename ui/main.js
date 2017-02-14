@@ -1,6 +1,6 @@
 console.log('Loaded!');
 
-var onmouseenter = document.getElementById('mini');
+//var onmouseenter = document.getElementById('mini');
 
 function onclk(){
     if(onmouseenter==1){
