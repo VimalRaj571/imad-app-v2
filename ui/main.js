@@ -50,6 +50,6 @@ request.onreadystatechange = function(){
 //request.onreadystatechange = function(){
 //    if(request.readyState === XMLHttpRequest.DONE){
 //        //Take some Action 
-//        if(request.status === 200){ OURS FUNC :) }   }  } }
+//        if(request.status === 200){ OURS FUNC :) }   }  }  }
 //request.open('GET', 'http://vimalraj571.imad.hasura-app.io/counter', true);
 //request.send(null);
