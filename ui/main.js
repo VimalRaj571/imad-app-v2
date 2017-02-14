@@ -11,5 +11,5 @@ function moveRight(){
         }
 
 img.onclick = function(){
-    animate = setInterval(moveRight,20); // call moveRight in 20msec
+    var animate = setInterval(moveRight,20); // call moveRight in 20msec
 };
