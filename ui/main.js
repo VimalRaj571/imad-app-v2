@@ -2,7 +2,7 @@ console.log('Loaded!');
 
 var img = document.getElementById('mini');
 
-//make anim try put soome non static msg
+
 var marginLeft= 0 ;
 function moveRight(){                                                           //func1 to make add leftmargin ++
     marginLeft = marginLeft + 1 ;
