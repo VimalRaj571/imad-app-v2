@@ -43,6 +43,15 @@ request.onreadystatechange = function(){
 };
 
 
+//Submit BUTTON
+var input = document.getElementById('name');
+var submit = document.getElementById('sub');
+values = input.values;
+submit.onclick = function(){
+    
+    
+};
+
 
 //Common in ajax call reqs
 //some.func = function () {
