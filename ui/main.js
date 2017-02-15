@@ -71,7 +71,7 @@ request.onreadystatechange = function(){
     };
     //Make Req
     var input = document.getElementById('name');
-    values = input.values;
+    values = input.value;
     request.open('GET', 'http://vimalraj571.imad.hasura-app.io/submit-names?name='+values, true);
     request.send(null);
 
