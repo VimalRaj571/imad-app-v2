@@ -44,9 +44,9 @@ request.onreadystatechange = function(){
 
 
 //Submit BUTTON
-var input = document.getElementById('name');
+
 var submit = document.getElementById('sub');
-values = input.values;
+
 submit.onclick = function(){
 
 var request = new XMLHttpRequest();
@@ -70,6 +70,8 @@ request.onreadystatechange = function(){
         }
     };
     //Make Req
+    var input = document.getElementById('name');
+    values = input.values;
     request.open('GET', 'http://vimalraj571.imad.hasura-app.io/submit-names?name='+values, true);
     request.send(null);
 
