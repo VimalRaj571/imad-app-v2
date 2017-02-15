@@ -89,7 +89,7 @@ app.get('/submit-names/:name', function(req, res){
     //Get the name from request OBJ
     var name = req.params.name;
     
-    names.push(name);   //names is array [] and the name is rq URL values
+    names.push(name);   //names is array [] and the name is rq URL values like this /submit-names/somenames
     //JSON = Javascript Object Notation
     res.send(JSON.stringify(names));
 });
