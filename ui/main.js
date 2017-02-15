@@ -49,7 +49,15 @@ var submit = document.getElementById('sub');
 values = input.values;
 submit.onclick = function(){
     
-    
+    //Get the name from txt box
+    var names = ['name1','name2','name3'];
+    var list ='';
+    for(var i=0;i<names.length;i++){
+        list='<li>'+names[i]+'</li>';
+        
+    }
+    var ol = document.getElementById('name_list');
+    ol.innerHTML = list;
 };
 
 
