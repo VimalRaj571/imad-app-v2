@@ -5,6 +5,16 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var names = [];                                                                 //P.S = Check the Name and Names variable NAMES 
+app.get('/submit-names', function(req, res){    // URL like this /submit-name?name=xxxx
+    //Get the name from request OBJ
+    var name = req.query.name;         //To use the req.query.name insted of req.params.name
+    
+    names.push(name);   //names is array [] and the name is rq URL values like this /submit-names/somenames
+    //JSON = Javascript Object Notation
+    res.send(JSON.stringify(names));
+});
+
 var articles = {
     'article-one' :{
     title : 'art-1',
@@ -61,16 +71,6 @@ var counter = 0;
 app.get('/counter', function (req, res) {
   counter = counter + 1 ; 
   res.send(counter.toString());
-});
-
-var names = [];                                                                 //P.S = Check the Name and Names variable NAMES 
-app.get('/submit-names', function(req, res){    // URL like this /submit-name?name=xxxx
-    //Get the name from request OBJ
-    var name = req.query.name;         //To use the req.query.name insted of req.params.name
-    
-    names.push(name);   //names is array [] and the name is rq URL values like this /submit-names/somenames
-    //JSON = Javascript Object Notation
-    res.send(JSON.stringify(names));
 });
 
 app.get('/', function (req, res) {
