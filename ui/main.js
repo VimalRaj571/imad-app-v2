@@ -48,15 +48,31 @@ var input = document.getElementById('name');
 var submit = document.getElementById('sub');
 values = input.values;
 submit.onclick = function(){
-    
-    //Get the name from txt box
-    var names = ['name1','name2','name3'];
-    var list ='';
-    for(var i=0;i<names.length;i++){
-        list += '<li>'+names[i]+'</li>';
-    }
-    var ol = document.getElementById('name_list');
-    ol.innerHTML = list;
+
+var request = new XMLHttpRequest();
+
+//Capture the response and store in the variable
+
+request.onreadystatechange = function(){
+    if(request.readyState === XMLHttpRequest.DONE){
+        //Take some Action 
+        if(request.status === 200){
+            //Get the name from txt box
+            var names = request.responseText;
+            names = JSON.parse(names);
+            var list ='';
+            for(var i=0;i<names.length;i++){
+                list += '<li>'+names[i]+'</li>';
+            }
+            var ol = document.getElementById('name_list');
+            ol.innerHTML = list;
+            }
+        }
+    };
+    //Make Req
+    request.open('GET', 'http://vimalraj571.imad.hasura-app.io/submit-names?name='+values, true);
+    request.send(null);
+
 };
 
 
