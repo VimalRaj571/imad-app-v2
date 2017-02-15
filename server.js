@@ -81,7 +81,7 @@ app.get('/ui/madi.png', function (req, res) {
 
 //submit-names
 var names = [];                                                                 //P.S = Check the Name and Names variable NAMES 
-app.get('/submit-names', function(req, res){    // URL like this /submit-name?name=xxxx
+app.get("/submit-names", function(req, res){    // URL like this /submit-name?name=xxxx
     //Get the name from request OBJ
     var name = req.query.name;      //To use the req.query.name insted of req.params.name
     
@@ -90,7 +90,7 @@ app.get('/submit-names', function(req, res){    // URL like this /submit-name?na
     res.send(JSON.stringify(names));
 });
 
-app.get('/:articleName', function (req, res) {
+app.get("/:articleName", function (req, res) {
   var articleName = req.params.articleName;
   res.send(createTemp(articles[articleName]));   //In here "articles" obj names data=articleName=art1 or art2 or art3
 });
