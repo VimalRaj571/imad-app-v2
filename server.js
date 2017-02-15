@@ -84,7 +84,7 @@ app.get('/:articleName', function (req, res) {
   res.send(createTemp(articles[articleName]));   //In here "articles" obj names data=articleName=art1 or art2 or art3
 });
 
-var names = [];
+var names = [];                                                                 //P.S = Check the Name and Names variable NAMES 
 app.get('/submit-names/:name', function(req, res){
     //Get the name from request OBJ
     var name = req.params.name;
