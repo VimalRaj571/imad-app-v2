@@ -85,7 +85,7 @@ app.get('/:articleName', function (req, res) {
 });
 
 var names = [];
-app.get('/submit-name/:name', function(req, res){
+app.get('/submit-names/:name', function(req, res){
     //Get the name from request OBJ
     var name = req.params.name;
     
