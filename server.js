@@ -95,6 +95,7 @@ app.get("/:articleName", function (req, res) {
   res.send(createTemp(articles[articleName]));   //In here "articles" obj names data=articleName=art1 or art2 or art3
 });
 
+//Next connect DB
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
