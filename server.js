@@ -79,11 +79,6 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-app.get('/:articleName', function (req, res) {
-  var articleName = req.params.articleName;
-  res.send(createTemp(articles[articleName]));   //In here "articles" obj names data=articleName=art1 or art2 or art3
-});
-
 var names = [];                                                                 //P.S = Check the Name and Names variable NAMES 
 app.get('/submit-names', function(req, res){    // URL like this /submit-name?name=xxxx
     //Get the name from request OBJ
@@ -93,6 +88,12 @@ app.get('/submit-names', function(req, res){    // URL like this /submit-name?na
     //JSON = Javascript Object Notation
     res.send(JSON.stringify(names));
 });
+
+app.get('/:articleName', function (req, res) {
+  var articleName = req.params.articleName;
+  res.send(createTemp(articles[articleName]));   //In here "articles" obj names data=articleName=art1 or art2 or art3
+});
+
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
