@@ -82,6 +82,10 @@ var cmd_dabba = document.getElementById('cmd_box');
 var cmd_sub_btn = document.getElementById('cmd_btn');
 var cmd_dis = document.getElementById('cmd_output');
 
+cmd_sub_btn.onclick = function(){
+    cmd_dis.innerHTML = 'This the stuffs';    
+};
+
 
 
 
