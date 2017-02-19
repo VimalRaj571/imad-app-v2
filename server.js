@@ -90,6 +90,15 @@ app.get("/submit-names", function(req, res){    // URL like this /submit-names?n
     res.send(JSON.stringify(names));
 });
 
+var commands = [];
+app.get("/commands",function(req, res){
+    var command = req.query.commands;
+    
+    commands.push(command);
+    res.send(JSON.stringify(commands));
+    
+});
+
 app.get("/:articleName", function (req, res) {
   var articleName = req.params.articleName;
   res.send(createTemp(articles[articleName]));   //In here "articles" obj names data=articleName=art1 or art2 or art3
