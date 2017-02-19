@@ -77,6 +77,14 @@ request.onreadystatechange = function(){
 
 };
 
+//Submit Comments
+var cmd_dabba = document.getElementById('cmd_box');
+var cmd_sub_btn = document.getElementById('cmd_btn');
+var cmd_dis = document.getElementById('cmd_output');
+
+
+
+
 
 //Common in ajax call reqs
 //some.func = function () {
