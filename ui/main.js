@@ -83,7 +83,25 @@ var cmd_sub_btn = document.getElementById('cmd_btn');
 var cmd_dis = document.getElementById('cmd_output');
 
 cmd_sub_btn.onclick = function(){
-    cmd_dis.innerHTML = 'This the stuffs';    
+//Common in ajax call reqs
+some.func = function () {
+var request = new XMLHttpRequest();
+request.onreadystatechange = function(){
+    if(request.readyState === XMLHttpRequest.DONE){
+        //Take some Action 
+        if(request.status === 200){  
+            
+            
+        cmd_dis.innerHTML = 'This the stuffs';
+            } 
+        } 
+    } ;
+    
+};
+
+
+request.open('GET', 'http://vimalraj571.imad.hasura-app.io/counter', true);
+request.send(null);      
 };
 
 
