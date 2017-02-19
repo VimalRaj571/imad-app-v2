@@ -89,10 +89,10 @@ request.onreadystatechange = function(){
         //Take some Action 
         if(request.status === 200){  
             var commands = request.responseText;
-            names = JSON.parse(commands);
+            commands = JSON.parse(commands);
             var list_cmd ='';
-            for(var i=0;i<names.length;i++){
-            list += '<li>'+names[i]+'</li>';    
+            for(var i=0;i<commands.length;i++){
+            list += '<li>'+commands[i]+'</li>';    
             } 
             var cmd_dis = document.getElementById('cmd_output');
             cmd_dis.innerHTML = list_cmd;
