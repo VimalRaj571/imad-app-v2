@@ -78,32 +78,33 @@ request.onreadystatechange = function(){
 };
 
 //Submit Comments
-var cmd_dabba = document.getElementById('cmd_box');
 var cmd_sub_btn = document.getElementById('cmd_btn');
-var cmd_dis = document.getElementById('cmd_output');
 
 cmd_sub_btn.onclick = function(){
 //Common in ajax call reqs
-some.func = function () {
+
 var request = new XMLHttpRequest();
 request.onreadystatechange = function(){
     if(request.readyState === XMLHttpRequest.DONE){
         //Take some Action 
         if(request.status === 200){  
-            
-            
-        cmd_dis.innerHTML = 'This the stuffs';
+            var commands = request.responseText;
+            names = JSON.parse(commands);
+            var list_cmd ='';
+            for(var i=0;i<names.length;i++){
+            list += '<li>'+names[i]+'</li>';    
             } 
+            var cmd_dis = document.getElementById('cmd_output');
+            cmd_dis.innerHTML = list_cmd;
+             } 
         } 
-    } ;
     
+    };
+    var cmd_dabba = document.getElementById('cmd_box');
+    value_cmd = cmd_dabba.value;
+    request.open('GET', 'http://vimalraj571.imad.hasura-app.io/commands?commands='+value_cmd, true);
+    request.send(null);      
 };
-
-
-request.open('GET', 'http://vimalraj571.imad.hasura-app.io/counter', true);
-request.send(null);      
-};
-
 
 
 
