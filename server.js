@@ -99,6 +99,14 @@ app.get("/commands",function(req, res){
     
 });
 
+
+app.get("/test-db" ,function(req, res){
+   //the DB check
+   //And return thee response
+    
+});
+
+
 app.get("/:articleName", function (req, res) {
   var articleName = req.params.articleName;
   res.send(createTemp(articles[articleName]));   //In here "articles" obj names data=articleName=art1 or art2 or art3
