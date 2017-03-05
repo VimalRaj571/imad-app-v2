@@ -11,6 +11,20 @@ var config = {
     password : process.env.DB_PASSWORD
 };
 
+var pool = new Pool(config);
+app.get("/test-db" ,function(req, res){
+   //the DB check
+   //And return thee response
+    pool.query("SELECT * FROM test",function (err ,result){
+       if(err){
+           res.status(500).send(err.toString());
+       } else{
+           res.send(JSON.stringify(result));
+       }
+    });
+});
+
+
 var app = express();
 app.use(morgan('combined'));
 
@@ -106,19 +120,6 @@ app.get("/commands",function(req, res){
     commands.push(command);
     res.send(JSON.stringify(commands));
     
-});
-
-var pool = new Pool(config);
-app.get("/test-db" ,function(req, res){
-   //the DB check
-   //And return thee response
-    pool.query("SELECT * FROM test",function (err ,result){
-       if(err){
-           res.status(500).send(err.toString());
-       } else{
-           res.send(JSON.stringify(result));
-       }
-    });
 });
 
 
