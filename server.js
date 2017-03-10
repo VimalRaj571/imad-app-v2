@@ -130,9 +130,23 @@ app.get("/commands",function(req, res){
 });
 
 
-app.get("/:articleName", function (req, res) {
-  var articleName = req.params.articleName;
-  res.send(createTemp(articles[articleName]));   //In here "articles" obj names data=articleName=art1 or art2 or art3
+app.get("/articles/:articleName", function (req, res) {
+  
+  //var articleName = req.params.articleName;
+  
+  pool.query(`SELECT * FROM articles WHERE title = ` + req.params.articleName, function(err, result){
+      if(err){
+          res.status(500).send(err.toString());
+      }else{
+          if(result.rows.length === 0){
+              res.status(404).send('Articls Not Found');
+          } else{
+              var articleData = result.rows[0];
+              res.send(createTemp(articles[articleData]));   //In here "articles" obj names data=articleName=art1 or art2 or art3    
+          }
+      }
+      
+   });
 });
 
 //Next connect DB
