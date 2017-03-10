@@ -79,7 +79,7 @@ app.get('/', function (req, res) {
 });
 
 
-//var pool = new Pool(config);
+var pool = new Pool(config);
 app.get("/test-db" ,function(req, res){
    res.send('Hi');
    //the DB check
