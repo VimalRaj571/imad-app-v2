@@ -80,7 +80,7 @@ app.get('/', function (req, res) {
 
 
 var pool = new Pool(config);
-app.get('/test-db' ,function(req, res){
+app.get("/test-db" ,function(req, res){
    //the DB check
    //And return thee response
     pool.query("SELECT * FROM test",function (err ,result){
