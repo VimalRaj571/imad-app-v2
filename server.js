@@ -37,7 +37,7 @@ var articles = {
 function createTemp(data){
     var title = data.title;
     var date = data.date;
-    var cont = data.cont;
+    var cont = data.content;
     var head = data.heading;
     var htmlTemp=
         `<!DOCTYPE html>
