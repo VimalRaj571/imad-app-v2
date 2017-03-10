@@ -83,7 +83,7 @@ var pool = new Pool(config);
 app.get("/test-db" ,function(req, res){
    //the DB check
    //And return thee response
-    pool.query("SELECT * FROM test",function (err ,result){
+    pool.query("SELECT * FROM test",function (err, result){
        if(err){
            res.status(500).send(err.toString());
        } else{
