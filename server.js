@@ -54,10 +54,10 @@ function createTemp(data){
                     <a href="/" >Home</a>
                 </div>
                 <hr>
-                <h3>${heading}</h3>
+                <h3>${head}</h3>
                 <div>
                 <div>
-                    ${date}
+                    ${date.toDateString}
                 </div>
                 <div>
                     ${cont}
