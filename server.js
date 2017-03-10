@@ -57,7 +57,7 @@ function createTemp(data){
                 <h3>${head}</h3>
                 <div>
                 <div>
-                    ${date.toDateString}
+                    ${date.toDateString()}
                 </div>
                 <div>
                     ${cont}
