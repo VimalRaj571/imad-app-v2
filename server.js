@@ -144,7 +144,7 @@ app.get("/articles/:articleName", function (req, res) {
               res.status(404).send('Articls Not Found');
           } else{
               var articleData = result.rows[0];
-              res.send(createTemp(articles[articleData]));   //In here "articles" obj names data=articleName=art1 or art2 or art3    
+              res.send(createTemp(articleData));   //In here "articles" obj names data=articleName=art1 or art2 or art3    
           }
       }
       
