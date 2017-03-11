@@ -20,7 +20,7 @@ var articles = {
     'article-one' :{
     title : 'art-1',
     date : 'Feb-1',
-    cont :`<p>Some stuff in article-1`
+    cont :`<p>Some stuff in article-1</p>`
     },
     'article-two' :{
     title : 'art-2',
@@ -136,7 +136,7 @@ app.get("/articles/:articleName", function (req, res) {
   
   //var articleName = req.params.articleName;
   
-  //SELECT * FROM articles WHERE title = 'article-one'
+  //SELECT * FROM articles WHERE title = ''; DELETE WHERE a = 'asdf'
   pool.query("SELECT * FROM articles WHERE title = '" + req.params.articleName +"'" , function(err, result){
       if(err){
           res.status(500).send(err.toString());
