@@ -15,25 +15,6 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-
-var articles = {
-    'article-one' :{
-    title : 'art-1',
-    date : 'Feb-1',
-    cont :`<p>Some stuff in article-1</p>`
-    },
-    'article-two' :{
-    title : 'art-2',
-    date : 'Feb-2',
-    cont :`<p>Some stuff in article-2`
-    },
-    'article-three' :{
-    title : 'art-3',
-    date : 'Feb-3',
-    cont :`<p>Some stuff in article-3`
-    },
-};
-
 function createTemp(data){
     var title = data.title;
     var date = data.date;
