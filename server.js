@@ -17,7 +17,7 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
-app.use(bodyParser.raw());
+//app.use(bodyParser.raw());
 
 function createTemp(data){
     var title = data.title;
