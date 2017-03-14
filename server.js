@@ -53,7 +53,7 @@ function createTemp(data){
         </html>`;
 return htmlTemp ;
 }
-
+var pool = new Pool(config);
 var counter = 0;
 app.get('/counter', function (req, res) {
   counter = counter + 1 ; 
@@ -98,7 +98,7 @@ app.post('/create-user' ,function (req ,res){
 
 
 //Connection pools
-var pool = new Pool(config);
+
 app.get("/test-db" ,function(req, res){
    //res.send('Hi');
    //the DB check
