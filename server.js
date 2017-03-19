@@ -102,7 +102,7 @@ app.post('/login' ,function(req ,res){
        if(err){
            res.status(500).send(err.toString());
        } else{
-           if(result.row.length === 0 ){
+           if(result.rows.length === 0 ){
                res.send(403).send('No username or password is invalid');
            }else{
                 //Match the password
