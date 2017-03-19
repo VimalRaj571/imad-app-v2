@@ -74,7 +74,7 @@ request.onreadystatechange = function(){
     var password = document.getElementById('password');
     console.log(username);
     console.log(password);
-    request.open('POST', 'http://vimalraj571.imad.hasura-app.io/submit-names?name='+values, true);
+    request.open('POST', 'http://vimalraj571.imad.hasura-app.io/login', true);
     request.send(JSON.stringify({username : username , password : password}));
 
 };
