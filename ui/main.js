@@ -45,7 +45,7 @@ request.onreadystatechange = function(){
 
 //Submit Username/Password
 
-var submit = document.getElementById('sub');
+var submit = document.getElementById('sub_btn');
 
 submit.onclick = function(){
 
