@@ -28,7 +28,7 @@ request.onreadystatechange = function(){
     if(request.readyState === XMLHttpRequest.DONE){
         //Take some Action 
         if(request.status === 200){
-           consloe.log('user is logged in');
+           console.log('user is logged in');
                 alert('Logged in successfully');
             } else if (request.status === 403){
                 alert('Username or password is incorrect');    
