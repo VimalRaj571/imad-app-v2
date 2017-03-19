@@ -98,11 +98,23 @@ app.post('/create-user' ,function (req ,res){
 app.post('/login' ,function(req ,res){
    var username = req.body.username;
    var password = req.body.password;
-   pool.query('INSERT INTO "user" (username, password) VALUES ($1, $2)',[username,dbString], function(err,result){
+   pool.query('SELECT *FORM "user" username= $1',[username], function(err,result){
        if(err){
            res.status(500).send(err.toString());
        } else{
-           res.send('User Sucessfully created :' + username);
+           if(result.row.length === 0 ){
+               res.send(403).send('No username or password is invalid');
+           }else{
+                //Match the password
+                var dbString = result.rows[0].password;
+                var salt = dbStirng.split('$1')[2];
+                var hashedPassword = hash(password ,salt);   //Created a hash bashed on the password submitted and the original salt
+                if(hashedPassword === dbString){
+                 res.send('User Credentials are correct');           
+                } else {
+                    res.send(403).send('Username/Password is invalid');
+                }
+           }
        }
    });
 });
