@@ -32,7 +32,7 @@ request.onreadystatechange = function(){
            alert('Logged in successfully');
             } else if (request.status === 403){
                 alert('Username or password is incorrect');    
-            } else if (error.status === 500){
+            } else if (request.status === 500){
                 alert('Something else');
             }
         }
