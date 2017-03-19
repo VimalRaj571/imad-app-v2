@@ -53,8 +53,12 @@ function createTemp(data){
         </html>`;
 return htmlTemp ;
 }
+
+
 var pool = new Pool(config);
 var counter = 0;
+
+
 app.get('/counter', function (req, res) {
   counter = counter + 1 ; 
   res.send(counter.toString());
