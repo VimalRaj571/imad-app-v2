@@ -72,8 +72,6 @@ request.onreadystatechange = function(){
     //Make Req
     var username = document.getElementById('username');
     var password = document.getElementById('password');
-    values = username.value;
-    values = password.value;
     request.open('POST', 'http://vimalraj571.imad.hasura-app.io/submit-names?name='+values, true);
     request.send(JSON.stringify({username : username , password : password}));
 
