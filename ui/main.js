@@ -57,15 +57,12 @@ request.onreadystatechange = function(){
     if(request.readyState === XMLHttpRequest.DONE){
         //Take some Action 
         if(request.status === 200){
-            //Get the name from txt box
-            var names = request.responseText;
-            names = JSON.parse(names);
-            var list ='';
-            for(var i=0;i<names.length;i++){
-                list += '<li>'+names[i]+'</li>';
-            }
-            var ol = document.getElementById('name_list');
-            ol.innerHTML = list;
+           consloe.log('user is logged in');
+           alert('Logged in successfully');
+            } else if (request.status === 403){
+                alert('Username or password is incorrect');    
+            } else if (error.status === 500){
+                alert('Something else');
             }
         }
     };
