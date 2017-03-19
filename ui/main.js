@@ -43,7 +43,7 @@ request.onreadystatechange = function(){
 };
 
 
-//Submit BUTTON
+//Submit Username/Password
 
 var submit = document.getElementById('sub');
 
@@ -70,10 +70,12 @@ request.onreadystatechange = function(){
         }
     };
     //Make Req
-    var input = document.getElementById('name');
-    values = input.value;
-    request.open('GET', 'http://vimalraj571.imad.hasura-app.io/submit-names?name='+values, true);
-    request.send(null);
+    var username = document.getElementById('username');
+    var password = document.getElementById('password');
+    values = username.value;
+    values = password.value;
+    request.open('POST', 'http://vimalraj571.imad.hasura-app.io/submit-names?name='+values, true);
+    request.send(JSON.stringify({username : username , password : password}));
 
 };
 
